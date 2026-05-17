@@ -76,3 +76,52 @@ img {
     grid-template-columns: 1fr !important;
   }
 }
+@media (max-width: 768px) {
+  header {
+    height: auto !important;
+    padding: 18px 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+  }
+
+  header nav {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    font-size: 13px !important;
+  }
+
+  header nav a {
+    margin-bottom: 8px !important;
+  }
+
+  section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  section > div {
+    grid-template-columns: 1fr !important;
+  }
+
+  h1 {
+    font-size: 42px !important;
+    line-height: 1.08 !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+  }
+
+  [style*="repeat(5,1fr)"],
+  [style*="repeat(4,1fr)"],
+  [style*="repeat(3,1fr)"],
+  [style*="repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  footer > div {
+    grid-template-columns: 1fr !important;
+  }
+}
