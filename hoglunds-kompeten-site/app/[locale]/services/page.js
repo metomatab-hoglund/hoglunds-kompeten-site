@@ -1,2 +1,7 @@
-import Home from '../page';
-export default function Page({params}){return <Home params={params}/>}
+export default function ServicesPage() {
+  return (
+    <main style={{padding:'40px',fontFamily:'Arial'}}>
+      <h1>Services Page</h1>
+    </main>
+  )
+}
