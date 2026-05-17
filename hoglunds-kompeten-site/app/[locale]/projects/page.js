@@ -1,2 +1,5 @@
-import Home from '../page';
-export default function Page({params}){return <Home params={params}/>}
+import ServicesPage from '../services/page';
+
+export default function ProjectsPage() {
+  return <ServicesPage />;
+}
