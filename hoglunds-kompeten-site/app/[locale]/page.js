@@ -64,7 +64,25 @@ export default function Home({ params }) {
             </div>
           </div>
 
-          <div style={heroImage}></div>
+          <div style={{
+            height: 430,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#fff",
+            borderRadius: 4
+          }}>
+            <img
+              src="https://i.postimg.cc/2SK2S4pX/logo.png"
+              alt="Hoglunds Kompetens Logo"
+              style={{
+                width: 390,
+                height: 390,
+                objectFit: "contain",
+                display: "block"
+              }}
+            />
+          </div>
         </div>
       </section>
 
@@ -105,13 +123,6 @@ const nav = { color: "#111", textDecoration: "none" };
 const label = { color: "#e6aa00", fontWeight: 900, fontSize: 13 };
 const yellowBtn = { background: "#f5c400", padding: "16px 28px", borderRadius: 5, color: "#111", textDecoration: "none", fontWeight: 800 };
 const outlineBtn = { border: "2px solid #111", padding: "14px 26px", borderRadius: 5, color: "#111", textDecoration: "none", fontWeight: 800 };
-
-const heroImage = {
-  height: 430,
-  background: "linear-gradient(90deg,#fff 0%,rgba(255,255,255,.5) 20%,rgba(255,255,255,0) 45%), url('/hero-energy-containers.jpg') center/cover no-repeat",
-  filter: "grayscale(100%)",
-  borderRadius: 4
-};
 
 function Footer() {
   return (
