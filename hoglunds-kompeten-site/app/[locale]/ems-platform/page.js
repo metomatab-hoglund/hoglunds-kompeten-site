@@ -1,5 +1,5 @@
-import Home from '../page';
+import Home from "../page";
 
-export default function Page(params) {
+export default function Page({ params }) {
   return <Home params={params} />;
 }
