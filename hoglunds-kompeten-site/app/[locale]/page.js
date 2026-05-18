@@ -7,29 +7,16 @@ export default function Home({ params }) {
       <header style={{ maxWidth: 1180, margin: "0 auto", height: 90, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
         <a href={base} style={{ display: "flex", gap: 12, alignItems: "center", color: "#111", textDecoration: "none" }}>
           
-          <div style={{ width: 52, height: 52 }}>
-            <svg viewBox="0 0 120 120" width="52" height="52">
-              <defs>
-                <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#FFD400" />
-                  <stop offset="100%" stopColor="#FF5A00" />
-                </linearGradient>
-              </defs>
-
-              <path
-                d="M60 8 L105 34 L105 86 L60 112 L15 86 L15 34 Z"
-                fill="none"
-                stroke="url(#g)"
-                strokeWidth="9"
-                strokeLinejoin="round"
-              />
-
-              <path
-                d="M66 20 L38 65 H58 L51 101 L84 52 H63 Z"
-                fill="url(#g)"
-              />
-            </svg>
-          </div>
+          <img
+            src="https://i.postimg.cc/2SK2S4pX/logo.png"
+            alt="Hoglunds Kompetens Logo"
+            style={{
+              width: 52,
+              height: 52,
+              objectFit: "contain",
+              display: "block"
+            }}
+          />
 
           <div>
             <b style={{ fontSize: 19 }}>Höglunds Kompetens</b>
