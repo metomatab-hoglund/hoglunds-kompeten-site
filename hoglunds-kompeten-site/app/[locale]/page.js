@@ -6,7 +6,15 @@ export default function Home({ params }) {
     <main style={{ fontFamily: "Arial, sans-serif", color: "#111", background: "#fff" }}>
       <header style={{ maxWidth: 1180, margin: "0 auto", height: 90, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
         <a href={base} style={{ display: "flex", gap: 12, alignItems: "center", color: "#111", textDecoration: "none" }}>
-          <div style={{ width: 52, height: 52, border: "4px solid #f5b800", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", color: "#f5b800", fontSize: 28 }}>⚡</div>
+          <div style={{ width: 52, height: 52, <img
+  src="https://i.postimg.cc/2SK2S4pX/logo.png"
+  alt="Hoglunds Kompetens"
+  style={{
+    width: 52,
+    height: 52,
+    objectFit: "contain"
+  }}
+/>, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", color: "#f5b800", fontSize: 28 }}>⚡</div>
           <div>
             <b style={{ fontSize: 19 }}>Höglunds Kompetens</b>
             <div style={{ fontSize: 13 }}>Hoglunds Competence</div>
