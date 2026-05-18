@@ -2,222 +2,288 @@ export default function Home({ params }) {
   const locale = params?.locale || "en";
   const base = `/${locale}`;
 
+  const nav = {
+    color: "#111",
+    textDecoration: "none",
+    fontWeight: 600,
+    fontSize: 15,
+  };
+
   return (
-    <main className="home-page" style={{ fontFamily: "Arial, sans-serif", color: "#111", background: "#fff" }}>
-      <header className="site-header" style={{ maxWidth: 1180, margin: "0 auto", height: 90, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
-        <a href={base} style={{ display: "flex", gap: 12, alignItems: "center", color: "#111", textDecoration: "none" }}>
+    <main
+      style={{
+        fontFamily: "Arial, sans-serif",
+        background: "#fff",
+        color: "#111",
+      }}
+    >
+      {/* HEADER */}
+      <header
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "24px 20px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 20,
+        }}
+      >
+        {/* LOGO */}
+        <a
+          href={base}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 14,
+            textDecoration: "none",
+            color: "#111",
+          }}
+        >
           <img
-            src="/logo.png"
-            alt="Höglunds Kompetens Logo"
-            style={{ width: 52, height: 52, borderRadius: 12, objectFit: "contain" }}
+            src="https://cdn-icons-png.flaticon.com/512/2482/2482841.png"
+            alt="logo"
+            style={{
+              width: 56,
+              height: 56,
+              objectFit: "contain",
+            }}
           />
+
           <div>
-            <b style={{ fontSize: 19 }}>Höglunds Kompetens</b>
-            <div style={{ fontSize: 13 }}>Hoglunds Competence</div>
+            <div
+              style={{
+                fontSize: 18,
+                fontWeight: 700,
+              }}
+            >
+              Höglunds Kompetens
+            </div>
+
+            <div
+              style={{
+                fontSize: 13,
+                color: "#666",
+              }}
+            >
+              Hoglunds Competence
+            </div>
           </div>
         </a>
 
-        <nav className="site-nav" style={{ display: "flex", gap: 30, alignItems: "center", fontWeight: 700, fontSize: 14 }}>
-          <a href={base} style={nav}>Home</a>
-          <a href={`${base}/services`} style={nav}>Services</a>
-          <a href={`${base}/ems-platform`} style={nav}>EMS Platform</a>
-          <a href={`${base}/projects`} style={nav}>Projects</a>
-          <a href={`${base}/about`} style={nav}>About Us</a>
-          <a href={`${base}/insights`} style={nav}>Insights</a>
-          <a href={`${base}/contact`} style={{ ...nav, background: "#111", color: "#fff", padding: "15px 24px", borderRadius: 5 }}>Contact Us →</a>
+        {/* NAVIGATION */}
+        <nav
+          style={{
+            display: "flex",
+            gap: 28,
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <a href={base} style={nav}>
+            Home
+          </a>
+
+          <a href={`${base}/services`} style={nav}>
+            Services
+          </a>
+
+          <a href={`${base}/ems-platform`} style={nav}>
+            EMS Platform
+          </a>
+
+          <a href={`${base}/projects`} style={nav}>
+            Projects
+          </a>
+
+          <a href={`${base}/about`} style={nav}>
+            About Us
+          </a>
+
+          <a href={`${base}/insights`} style={nav}>
+            Insights
+          </a>
+
+          <a
+            href={`${base}/contact`}
+            style={{
+              background: "#111",
+              color: "#fff",
+              padding: "14px 24px",
+              borderRadius: 10,
+              textDecoration: "none",
+              fontWeight: 700,
+            }}
+          >
+            Contact Us →
+          </a>
         </nav>
       </header>
 
-      <section className="hero-section" style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 24px 25px" }}>
-        <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.25fr", gap: 35, alignItems: "center" }}>
-          <div>
-            <div style={label}>POWERING A SUSTAINABLE FUTURE</div>
-            <h1 style={{ fontSize: 56, lineHeight: 1.05, margin: "12px 0", fontWeight: 900 }}>
-              Battery Energy<br />Storage & EMS<br />Solutions
-            </h1>
-            <p style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 500 }}>
-              Engineering, technical consulting and EMS optimization for sustainable energy projects across the Nordic and Europe.
-            </p>
-            <div style={{ display: "flex", gap: 16, marginTop: 28, flexWrap: "wrap" }}>
-              <a href={`${base}/services`} style={yellowBtn}>Our Services →</a>
-              <a href={`${base}/ems-platform`} style={outlineBtn}>Explore EMS Platform →</a>
-            </div>
+      {/* HERO */}
+      <section
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "40px 20px 80px",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 50,
+          alignItems: "center",
+        }}
+      >
+        {/* LEFT */}
+        <div>
+          <div
+            style={{
+              color: "#c58a00",
+              fontWeight: 700,
+              marginBottom: 20,
+              letterSpacing: 1,
+            }}
+          >
+            POWERING A SUSTAINABLE FUTURE
           </div>
 
-          <div style={heroImage}></div>
-        </div>
-      </section>
+          <h1
+            style={{
+              fontSize: "clamp(48px, 8vw, 86px)",
+              lineHeight: 1,
+              marginBottom: 30,
+              fontWeight: 800,
+            }}
+          >
+            Battery Energy
+            <br />
+            Storage & EMS
+            <br />
+            Solutions
+          </h1>
 
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 35px" }}>
-        <div className="four-grid" style={{ border: "1px solid #eee", borderRadius: 8, display: "grid", gridTemplateColumns: "repeat(4,1fr)" }}>
-          {[
-            ["⚡️", "From kW to MW Scale", "Solutions for commercial, industrial & utility projects."],
-            ["⚙️", "End-to-End Expertise", "Design, engineering, technical requirements & implementation"],
-            ["▥", "Maximize Revenue", "AI-driven EMS for energy trading & asset optimization"],
-            ["♧", "Sustainable Impact", "We help build a cleaner energy future"],
-          ].map((x, i) => (
-            <div key={i} style={{ padding: 24, display: "flex", gap: 16, borderRight: i < 3 ? "1px solid #eee" : "none" }}>
-              <div style={{ fontSize: 28 }}>{x[0]}</div>
-              <div><b>{x[1]}</b><p style={{ margin: "6px 0 0", fontSize: 13, lineHeight: 1.5 }}>{x[2]}</p></div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "20px 24px 45px" }}>
-        <div className="two-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50 }}>
-          <div>
-            <div style={label}>WHAT WE DO</div>
-            <h2 style={{ fontSize: 34, lineHeight: 1.15 }}>Expertise that powers<br />the energy transition</h2>
-          </div>
-          <p style={{ lineHeight: 1.7 }}>
-            Höglunds Kompetens delivers high-value engineering and consulting services for battery energy storage systems and power electronic solutions.
+          <p
+            style={{
+              fontSize: 22,
+              color: "#555",
+              lineHeight: 1.7,
+              maxWidth: 620,
+              marginBottom: 40,
+            }}
+          >
+            Engineering, technical consulting and EMS optimization for
+            sustainable energy projects across the Nordic and Europe.
           </p>
+
+          <div
+            style={{
+              display: "flex",
+              gap: 20,
+              flexWrap: "wrap",
+            }}
+          >
+            <a
+              href={`${base}/services`}
+              style={{
+                background: "#f5b800",
+                color: "#111",
+                padding: "18px 34px",
+                borderRadius: 12,
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: 17,
+              }}
+            >
+              Our Services →
+            </a>
+
+            <a
+              href={`${base}/ems-platform`}
+              style={{
+                border: "2px solid #111",
+                color: "#111",
+                padding: "18px 34px",
+                borderRadius: 12,
+                textDecoration: "none",
+                fontWeight: 700,
+                fontSize: 17,
+              }}
+            >
+              Explore EMS Platform →
+            </a>
+          </div>
         </div>
 
-        <div className="five-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 14, marginTop: 25 }}>
-          {["Battery Energy Storage Systems", "Power Electronics Engineering", "Technical Requirements & Documentation", "EMS & Energy Trading", "Aggregator Solutions"].map((t, i) => (
-            <div key={i} style={{ border: "1px solid #eee", borderRadius: 8, padding: 24, minHeight: 125 }}>
-              <div style={{ background: i === 2 ? "#6b3fc9" : i === 1 || i === 4 ? "#f27600" : "#f5c400", color: "#fff", width: 40, height: 40, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>▣</div>
-              <b>{t}</b>
-              <div style={{ marginTop: 22 }}>→</div>
-            </div>
-          ))}
+        {/* RIGHT IMAGE */}
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop"
+            alt="hero"
+            style={{
+              width: "100%",
+              borderRadius: 28,
+              objectFit: "cover",
+              minHeight: 500,
+              boxShadow: "0 20px 60px rgba(0,0,0,0.12)",
+            }}
+          />
         </div>
       </section>
 
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 45px" }}>
-        <div className="ems-grid" style={{ display: "grid", gridTemplateColumns: "0.9fr 1.6fr", gap: 35, alignItems: "center" }}>
-          <div>
-            <div style={label}>EMS PLATFORM</div>
-            <h2 style={{ fontSize: 38, lineHeight: 1.1 }}>Intelligent. Predictive.<br />Profitable.</h2>
-            <p style={{ lineHeight: 1.7 }}>
-              Our EMS platform optimizes battery operations and market participation, ensuring the right market at the right time.
+      {/* FEATURES */}
+      <section
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 20px 100px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+          gap: 24,
+        }}
+      >
+        {[
+          {
+            title: "From kW to MW Scale",
+            text: "Solutions for commercial, industrial & utility projects.",
+          },
+          {
+            title: "End-to-End Expertise",
+            text: "Design, engineering, technical requirements & implementation.",
+          },
+          {
+            title: "Smart EMS Optimization",
+            text: "Advanced battery optimization and monitoring systems.",
+          },
+        ].map((item, i) => (
+          <div
+            key={i}
+            style={{
+              padding: 34,
+              border: "1px solid #eee",
+              borderRadius: 24,
+              background: "#fafafa",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: 26,
+                marginBottom: 18,
+              }}
+            >
+              {item.title}
+            </h3>
+
+            <p
+              style={{
+                color: "#666",
+                lineHeight: 1.8,
+                fontSize: 17,
+              }}
+            >
+              {item.text}
             </p>
-            {["Price forecasting & market analysis", "AI-driven optimization & dispatch", "Multiple market participation", "Real-time monitoring & control", "Scalable aggregator platform"].map(x => (
-              <p key={x} style={{ margin: "10px 0" }}>🟡 {x}</p>
-            ))}
-            <a href={`${base}/ems-platform`} style={{ ...yellowBtn, display: "inline-block", marginTop: 18 }}>Explore EMS Platform →</a>
           </div>
-
-          <div style={dashboard}>
-            <h3>Dashboard</h3>
-            <div className="four-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
-              {["€ 1,248,721", "24", "125.6 MW", "63%"].map((n, i) => (
-                <div key={i} style={dashCard}><small>{["Total Revenue (EUR)", "Total Assets", "Total Capacity", "Avg. SOC"][i]}</small><b>{n}</b><span>{i === 0 ? "+18.6% vs last month" : i === 3 ? "In operation" : "Online"}</span></div>
-              ))}
-            </div>
-            <div className="chart-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 18, marginTop: 25 }}>
-              <div style={chartBox}>
-                <b>Revenue Overview</b>
-                <div style={{ height: 210, display: "flex", alignItems: "end", gap: 18, paddingTop: 25 }}>
-                  {[120, 150, 140, 180, 125, 135, 110].map((h, i) => <div key={i} style={{ height: h, width: 28, background: "#f5c400", borderRadius: 12 }} />)}
-                </div>
-              </div>
-              <div>
-                <div style={chartBox}><b>Market Price</b><div style={{ height: 90, paddingTop: 25 }}>⌁⌁⌁⌁⌁</div></div>
-                <div style={{ ...chartBox, marginTop: 16 }}><b>Battery Fleet</b><div style={{ fontSize: 42, marginTop: 10 }}>◔</div><p>Charging 30%<br />Discharging 30%<br />Standby 40%</p></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </section>
-
-      <Footer />
-
-      <style>{`
-        @media (max-width: 900px) {
-          .site-header {
-            height: auto !important;
-            flex-direction: column !important;
-            align-items: flex-start !important;
-            gap: 18px !important;
-            padding-top: 18px !important;
-            padding-bottom: 18px !important;
-          }
-
-          .site-nav {
-            width: 100% !important;
-            flex-wrap: wrap !important;
-            gap: 14px !important;
-          }
-
-          .hero-grid,
-          .two-grid,
-          .ems-grid,
-          .chart-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .four-grid,
-          .five-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .hero-section h1 {
-            font-size: 42px !important;
-          }
-
-          .hero-section {
-            padding-top: 24px !important;
-          }
-
-          footer > div {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </main>
-  );
-}
-
-const nav = { color: "#111", textDecoration: "none" };
-const label = { color: "#e6aa00", fontWeight: 900, fontSize: 13 };
-const yellowBtn = { background: "#f5c400", padding: "16px 28px", borderRadius: 5, color: "#111", textDecoration: "none", fontWeight: 800 };
-const outlineBtn = { border: "2px solid #111", padding: "14px 26px", borderRadius: 5, color: "#111", textDecoration: "none", fontWeight: 800 };
-
-const heroImage = {
-  height: 430,
-  background: "linear-gradient(90deg,#fff 0%,rgba(255,255,255,.5) 20%,rgba(255,255,255,0) 45%), url('/hero.jpg') center/cover no-repeat",
-  filter: "grayscale(100%)",
-  borderRadius: 4
-};
-
-const dashboard = {
-  border: "1px solid #eee",
-  borderRadius: 10,
-  padding: 28,
-  boxShadow: "0 20px 45px rgba(0,0,0,.08)",
-  animation: "fadeUp .8s ease"
-};
-
-const dashCard = {
-  background: "#fff",
-  padding: 18,
-  border: "1px solid #eee",
-  borderRadius: 8,
-  display: "flex",
-  flexDirection: "column",
-  gap: 8
-};
-
-const chartBox = {
-  border: "1px solid #eee",
-  borderRadius: 8,
-  padding: 20,
-  background: "#fff"
-};
-
-function Footer() {
-  return (
-    <footer style={{ background: "#070707", color: "#fff", padding: "40px 24px" }}>
-      <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr", gap: 30 }}>
-        <div><b>Höglunds Kompetens</b><p style={{ color: "#bbb" }}>Engineering and consulting services for battery energy storage systems and power electronic solutions across the Nordic and Europe.</p></div>
-        <div><b>Company</b><p>About Us<br />Projects<br />Insights<br />Careers</p></div>
-        <div><b>Services</b><p>BESS<br />Power Electronics<br />EMS & Trading<br />Aggregator Solutions</p></div>
-        <div><b>Resources</b><p>Blog<br />Case Studies<br />Downloads</p></div>
-        <div><b>Contact</b><p>info@hoglundskompetence.com<br />+46 10 123 45 67</p></div>
-      </div>
-    </footer>
   );
 }
