@@ -3,17 +3,21 @@ export default function Home({ params }) {
   const base = `/${locale}`;
 
   return (
-    <main style={{ fontFamily: "Arial, sans-serif", color: "#111", background: "#fff" }}>
-      <header style={{ maxWidth: 1180, margin: "0 auto", height: 90, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
+    <main className="home-page" style={{ fontFamily: "Arial, sans-serif", color: "#111", background: "#fff" }}>
+      <header className="site-header" style={{ maxWidth: 1180, margin: "0 auto", height: 90, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px" }}>
         <a href={base} style={{ display: "flex", gap: 12, alignItems: "center", color: "#111", textDecoration: "none" }}>
-          <div style={{ width: 52, height: 52, border: "4px solid #f5b800", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", color: "#f5b800", fontSize: 28 }}>⚡</div>
+          <img
+            src="/logo.png"
+            alt="Höglunds Kompetens Logo"
+            style={{ width: 52, height: 52, borderRadius: 12, objectFit: "contain" }}
+          />
           <div>
             <b style={{ fontSize: 19 }}>Höglunds Kompetens</b>
             <div style={{ fontSize: 13 }}>Hoglunds Competence</div>
           </div>
         </a>
 
-        <nav style={{ display: "flex", gap: 30, alignItems: "center", fontWeight: 700, fontSize: 14 }}>
+        <nav className="site-nav" style={{ display: "flex", gap: 30, alignItems: "center", fontWeight: 700, fontSize: 14 }}>
           <a href={base} style={nav}>Home</a>
           <a href={`${base}/services`} style={nav}>Services</a>
           <a href={`${base}/ems-platform`} style={nav}>EMS Platform</a>
@@ -24,8 +28,8 @@ export default function Home({ params }) {
         </nav>
       </header>
 
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 24px 25px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.25fr", gap: 35, alignItems: "center" }}>
+      <section className="hero-section" style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 24px 25px" }}>
+        <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.25fr", gap: 35, alignItems: "center" }}>
           <div>
             <div style={label}>POWERING A SUSTAINABLE FUTURE</div>
             <h1 style={{ fontSize: 56, lineHeight: 1.05, margin: "12px 0", fontWeight: 900 }}>
@@ -34,7 +38,7 @@ export default function Home({ params }) {
             <p style={{ fontSize: 17, lineHeight: 1.7, maxWidth: 500 }}>
               Engineering, technical consulting and EMS optimization for sustainable energy projects across the Nordic and Europe.
             </p>
-            <div style={{ display: "flex", gap: 16, marginTop: 28 }}>
+            <div style={{ display: "flex", gap: 16, marginTop: 28, flexWrap: "wrap" }}>
               <a href={`${base}/services`} style={yellowBtn}>Our Services →</a>
               <a href={`${base}/ems-platform`} style={outlineBtn}>Explore EMS Platform →</a>
             </div>
@@ -45,10 +49,10 @@ export default function Home({ params }) {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 35px" }}>
-        <div style={{ border: "1px solid #eee", borderRadius: 8, display: "grid", gridTemplateColumns: "repeat(4,1fr)" }}>
+        <div className="four-grid" style={{ border: "1px solid #eee", borderRadius: 8, display: "grid", gridTemplateColumns: "repeat(4,1fr)" }}>
           {[
-            ["⚡", "From kW to MW Scale", "Solutions for commercial, industrial & utility projects."],
-            ["⚙", "End-to-End Expertise", "Design, engineering, technical requirements & implementation"],
+            ["⚡️", "From kW to MW Scale", "Solutions for commercial, industrial & utility projects."],
+            ["⚙️", "End-to-End Expertise", "Design, engineering, technical requirements & implementation"],
             ["▥", "Maximize Revenue", "AI-driven EMS for energy trading & asset optimization"],
             ["♧", "Sustainable Impact", "We help build a cleaner energy future"],
           ].map((x, i) => (
@@ -61,7 +65,7 @@ export default function Home({ params }) {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "20px 24px 45px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50 }}>
+        <div className="two-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 50 }}>
           <div>
             <div style={label}>WHAT WE DO</div>
             <h2 style={{ fontSize: 34, lineHeight: 1.15 }}>Expertise that powers<br />the energy transition</h2>
@@ -71,7 +75,7 @@ export default function Home({ params }) {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 14, marginTop: 25 }}>
+        <div className="five-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 14, marginTop: 25 }}>
           {["Battery Energy Storage Systems", "Power Electronics Engineering", "Technical Requirements & Documentation", "EMS & Energy Trading", "Aggregator Solutions"].map((t, i) => (
             <div key={i} style={{ border: "1px solid #eee", borderRadius: 8, padding: 24, minHeight: 125 }}>
               <div style={{ background: i === 2 ? "#6b3fc9" : i === 1 || i === 4 ? "#f27600" : "#f5c400", color: "#fff", width: 40, height: 40, borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>▣</div>
@@ -83,7 +87,7 @@ export default function Home({ params }) {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 45px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "0.9fr 1.6fr", gap: 35, alignItems: "center" }}>
+        <div className="ems-grid" style={{ display: "grid", gridTemplateColumns: "0.9fr 1.6fr", gap: 35, alignItems: "center" }}>
           <div>
             <div style={label}>EMS PLATFORM</div>
             <h2 style={{ fontSize: 38, lineHeight: 1.1 }}>Intelligent. Predictive.<br />Profitable.</h2>
@@ -98,12 +102,12 @@ export default function Home({ params }) {
 
           <div style={dashboard}>
             <h3>Dashboard</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
+            <div className="four-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
               {["€ 1,248,721", "24", "125.6 MW", "63%"].map((n, i) => (
                 <div key={i} style={dashCard}><small>{["Total Revenue (EUR)", "Total Assets", "Total Capacity", "Avg. SOC"][i]}</small><b>{n}</b><span>{i === 0 ? "+18.6% vs last month" : i === 3 ? "In operation" : "Online"}</span></div>
               ))}
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 18, marginTop: 25 }}>
+            <div className="chart-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 18, marginTop: 25 }}>
               <div style={chartBox}>
                 <b>Revenue Overview</b>
                 <div style={{ height: 210, display: "flex", alignItems: "end", gap: 18, paddingTop: 25 }}>
@@ -120,6 +124,49 @@ export default function Home({ params }) {
       </section>
 
       <Footer />
+
+      <style>{`
+        @media (max-width: 900px) {
+          .site-header {
+            height: auto !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 18px !important;
+            padding-top: 18px !important;
+            padding-bottom: 18px !important;
+          }
+
+          .site-nav {
+            width: 100% !important;
+            flex-wrap: wrap !important;
+            gap: 14px !important;
+          }
+
+          .hero-grid,
+          .two-grid,
+          .ems-grid,
+          .chart-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .four-grid,
+          .five-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-section h1 {
+            font-size: 42px !important;
+          }
+
+          .hero-section {
+            padding-top: 24px !important;
+          }
+
+          footer > div {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }
@@ -131,7 +178,7 @@ const outlineBtn = { border: "2px solid #111", padding: "14px 26px", borderRadiu
 
 const heroImage = {
   height: 430,
-  background: "linear-gradient(90deg,#fff 0%,rgba(255,255,255,.5) 20%,rgba(255,255,255,0) 45%), url('/hero-energy-containers.jpg') center/cover no-repeat",
+  background: "linear-gradient(90deg,#fff 0%,rgba(255,255,255,.5) 20%,rgba(255,255,255,0) 45%), url('/hero.jpg') center/cover no-repeat",
   filter: "grayscale(100%)",
   borderRadius: 4
 };
