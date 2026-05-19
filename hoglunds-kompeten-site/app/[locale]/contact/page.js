@@ -78,7 +78,7 @@ export default function ContactPage({ params }) {
             <p>Feel free to reach out to us directly using the details below.</p>
 
             {[
-              ["⌖", "Head Office", "Höglunds Kompetens AB\Nina Einhorns Gata 6, 113 66 Stockholm, Sweden"],
+              ["⌖", "Head Office", "Höglunds Kompetens AB\Hagastaden, 113 66 Stockholm, Sweden"],
               ["☎", "Phone", "+46 73 700 11 69"],
               ["✉", "Email", "info@hoglundskompetens.se"],
               ["◎", "Service Area", "Sweden | Nordic Countries | Europe"],
