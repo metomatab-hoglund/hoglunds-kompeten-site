@@ -13,7 +13,7 @@ export default function Home({ params }) {
           />
           <div>
             <b style={{ fontSize: 19 }}>Höglunds Kompetens</b>
-            <div style={{ fontSize: 13 }}>Hoglunds Competence</div>
+            <div style={{ fontSize: 13 }}>Hoglunds Competens</div>
           </div>
         </a>
 
@@ -179,7 +179,7 @@ function Footer() {
         <div><b>Company</b><p>About Us<br />Projects<br />Insights<br />Careers</p></div>
         <div><b>Services</b><p>BESS<br />Power Electronics<br />EMS & Trading<br />Aggregator Solutions</p></div>
         <div><b>Resources</b><p>Blog<br />Case Studies<br />Downloads</p></div>
-        <div><b>Contact</b><p>info@hoglundskompetence.se<br />+46 73 700 11 69</p></div>
+        <div><b>Contact</b><p>info@hoglundskompetens.se<br />+46 73 700 11 69</p></div>
       </div>
     </footer>
   );
