@@ -80,7 +80,7 @@ export default function ContactPage({ params }) {
             {[
               ["⌖", "Head Office", "Höglunds Kompetens AB\Nina Einhorns Gata 6, 113 66 Stockholm, Sweden"],
               ["☎", "Phone", "+46 73 700 11 69"],
-              ["✉", "Email", "info@hoglundskompetence.se"],
+              ["✉", "Email", "info@hoglundskompetens.se"],
               ["◎", "Service Area", "Sweden | Nordic Countries | Europe"],
               ["◷", "Business Hours", "Monday – Friday: 08:00 – 17:00 CET"],
             ].map((x) => (
