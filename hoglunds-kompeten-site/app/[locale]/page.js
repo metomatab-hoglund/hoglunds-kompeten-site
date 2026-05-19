@@ -179,7 +179,7 @@ function Footer() {
         <div><b>Company</b><p>About Us<br />Projects<br />Insights<br />Careers</p></div>
         <div><b>Services</b><p>BESS<br />Power Electronics<br />EMS & Trading<br />Aggregator Solutions</p></div>
         <div><b>Resources</b><p>Blog<br />Case Studies<br />Downloads</p></div>
-        <div><b>Contact</b><p>info@hoglundskompetence.com<br />+46 10 123 45 67</p></div>
+        <div><b>Contact</b><p>info@hoglundskompetence.se<br />+46 73 700 11 69</p></div>
       </div>
     </footer>
   );
