@@ -78,9 +78,9 @@ export default function ContactPage({ params }) {
             <p>Feel free to reach out to us directly using the details below.</p>
 
             {[
-              ["⌖", "Head Office", "Höglunds Kompetens AB\nLindholmsallén 10, 417 56 Göteborg, Sweden"],
-              ["☎", "Phone", "+46 70 123 45 67"],
-              ["✉", "Email", "info@hoglundskompetence.com"],
+              ["⌖", "Head Office", "Höglunds Kompetens AB\Nina Einhorns Gata 6, 113 66 Stockholm, Sweden"],
+              ["☎", "Phone", "+46 73 700 11 69"],
+              ["✉", "Email", "info@hoglundskompetence.se"],
               ["◎", "Service Area", "Sweden | Nordic Countries | Europe"],
               ["◷", "Business Hours", "Monday – Friday: 08:00 – 17:00 CET"],
             ].map((x) => (
@@ -103,8 +103,8 @@ export default function ContactPage({ params }) {
             <h3 style={{ margin: 0, fontSize: 22 }}>Need immediate assistance?</h3>
             <p style={{ margin: "6px 0 0" }}>Call us directly or send an email — we’re here to support your project.</p>
           </div>
-          <a href="tel:+46701234567" style={yellowBtn}>☎ +46 70 123 45 67</a>
-          <a href="mailto:info@hoglundskompetence.com" style={outlineBtn}>✉ info@hoglundskompetence.com</a>
+          <a href="tel:+46737001169" style={yellowBtn}>☎ +46 73 700 11 69</a>
+          <a href="mailto:info@hoglundskompetence.se" style={outlineBtn}>✉ info@hoglundskompetence.se</a>
         </div>
       </section>
 
@@ -150,7 +150,7 @@ function Footer() {
         <div><b>Company</b><p>About Us<br />Projects<br />Insights<br />Careers</p></div>
         <div><b>Services</b><p>BESS<br />Power Electronics<br />EMS & Trading<br />Aggregator Solutions</p></div>
         <div><b>Resources</b><p>Blog<br />Case Studies<br />Downloads</p></div>
-        <div><b>Contact</b><p>info@hoglundskompetence.com<br />+46 70 123 45 67<br />Sweden</p></div>
+        <div><b>Contact</b><p>info@hoglundskompetence.se<br />+46 73 700 11 69<br />Sweden</p></div>
       </div>
     </footer>
   );
