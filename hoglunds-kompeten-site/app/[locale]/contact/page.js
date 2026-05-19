@@ -104,7 +104,7 @@ export default function ContactPage({ params }) {
             <p style={{ margin: "6px 0 0" }}>Call us directly or send an email — we’re here to support your project.</p>
           </div>
           <a href="tel:+46737001169" style={yellowBtn}>☎ +46 73 700 11 69</a>
-          <a href="mailto:info@hoglundskompetence.se" style={outlineBtn}>✉ info@hoglundskompetence.se</a>
+          <a href="mailto:info@hoglundskompetens.se" style={outlineBtn}>✉ info@hoglundskompetens.se</a>
         </div>
       </section>
 
@@ -120,7 +120,7 @@ function Header({ base }) {
         <div style={{ width: 52, height: 52, border: "4px solid #111", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28 }}>⚡</div>
         <div>
           <b style={{ fontSize: 19 }}>Höglunds Kompetens</b>
-          <div style={{ fontSize: 13 }}>Hoglunds Competence</div>
+          <div style={{ fontSize: 13 }}>Hoglunds Competens</div>
         </div>
       </a>
 
